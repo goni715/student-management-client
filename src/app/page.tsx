@@ -1,10 +1,10 @@
 
-const page = () => {
+const LoginPage = () => {
   return (
     <>
-      <h1>This is Job Finder App</h1>
+      <h1>This is Login Page</h1>
     </>
   );
 };
 
-export default page;
+export default LoginPage;
