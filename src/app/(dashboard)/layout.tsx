@@ -13,7 +13,7 @@ const DashboardLayout = ({children}: TProps) => {
         <>
             <div className="h-screen flex">
                 {/* Left */}
-                <div className="w-[14%] md:w-[8%] lg:w-[16%] xl:w-[14%] p-4 bg-red-300">
+                <div className="w-[14%] md:w-[8%] lg:w-[16%] xl:w-[14%] p-4">
                     <Link href="/" className="flex justify-center lg:justify-start items-center gap-2">
                       <Image src="/logo.png" alt="Logo" width={32} height={32}/>
                       <span className="hidden lg:block font-bold">SchooLama</span>
