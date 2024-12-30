@@ -1,3 +1,5 @@
+import AttendenceChart from "@/components/ui/Chart/AttendenceChart";
+import CountChart from "@/components/ui/Chart/CountChart";
 import UserCard from "@/components/ui/UserCard/UserCard";
 
 const AdminPage = () => {
@@ -13,8 +15,22 @@ const AdminPage = () => {
                  <UserCard type="parent"/>
                  <UserCard type="staff" />
                </div>
-               <div>
-                 left2
+
+               {/* Middle Chart */}
+               <div className="flex flex-col lg:flex-row gap-4">
+                 {/* Count Chart */}
+                 <div>
+                   <CountChart/>
+                 </div>
+                 {/* Attendence Chart */}
+                 <div>
+                   <AttendenceChart/>
+                 </div>
+               </div>
+
+               {/* Bottom Chart */}
+               <div className="w-full h-[500px]">
+                 Bottom Chart
                </div>
             </div>
             {/* Right */}
