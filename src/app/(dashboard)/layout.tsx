@@ -1,3 +1,4 @@
+import Menu from "@/components/ui/Menu/Menu";
 import Navbar from "@/components/ui/Navbar/Navbar";
 import Image from "next/image";
 import Link from "next/link";
@@ -17,6 +18,7 @@ const DashboardLayout = ({children}: TProps) => {
                       <Image src="/logo.png" alt="Logo" width={32} height={32}/>
                       <span className="hidden lg:block font-bold">SchooLama</span>
                     </Link>
+                    <Menu/>
                 </div>
                 {/* Right */}
                 <div className="w-[86%] md:w-[92%] lg:w-[84%] xl:w-[86%] bg-cyan-300 overflow-y-scroll flex flex-col">
