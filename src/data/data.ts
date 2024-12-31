@@ -5,9 +5,27 @@ export const menuItems = [
         {
           icon: "/home.png",
           label: "Home",
-          href: "/",
-          visible: ["admin", "teacher", "student", "parent"],
+          href: "/admin",
+          visible: ["admin"],
         },
+        {
+          icon: "/home.png",
+          label: "Home",
+          href: "/teacher",
+          visible: ["teacher"],
+        },
+        {
+          icon: "/home.png",
+          label: "Home",
+          href: "/",
+          visible: ["student"],
+        },
+        {
+          icon: "/home.png",
+          label: "Home",
+          href: "/",
+          visible: ["parent"],
+        },      
         {
           icon: "/teacher.png",
           label: "Teachers",
