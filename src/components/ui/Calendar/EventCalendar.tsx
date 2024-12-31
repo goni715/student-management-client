@@ -1,8 +1,19 @@
+"use client";
+import { useState } from 'react';
+import Calendar from 'react-calendar';
+
+type ValuePiece = Date | null;
+
+type Value = ValuePiece | [ValuePiece, ValuePiece];
 
 const EventCalendar = () => {
+    const [value, onChange] = useState<Value>(new Date());
+
     return (
         <>
-            <h1>This is Event Calendar</h1>
+            <div>
+              <Calendar onChange={onChange} value={value} />
+            </div>
         </>
     );
 };
