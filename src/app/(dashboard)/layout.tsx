@@ -11,7 +11,7 @@ type TProps = {
 const DashboardLayout = ({children}: TProps) => {
     return (
         <>
-            <div className="h-screen flex">
+            <div className="flex">
                 {/* Left */}
                 <div className="w-[14%] md:w-[8%] lg:w-[16%] xl:w-[14%] p-4">
                     <Link href="/" className="flex justify-center lg:justify-start items-center gap-2">
@@ -21,12 +21,12 @@ const DashboardLayout = ({children}: TProps) => {
                     <Menu/>
                 </div>
                 {/* Right */}
-                <div className="w-[86%] md:w-[92%] lg:w-[84%] xl:w-[86%] overflow-y-scroll flex flex-col">
+                <div className="w-[86%] md:w-[92%] lg:w-[84%] xl:w-[86%] flex flex-col">
                     <Navbar/>
                     {/* content */}
-                    {/* <div className=""> */}
+                    <div className="h-[70vh] overflow-y-scroll"> 
                         {children}
-                    {/* </div> */}
+                    </div> 
                 </div>
             </div>
             {/* {children} */}
