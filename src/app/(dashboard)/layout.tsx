@@ -24,7 +24,7 @@ const DashboardLayout = ({children}: TProps) => {
                 <div className="w-[86%] md:w-[92%] lg:w-[84%] xl:w-[86%] flex flex-col">
                     <Navbar/>
                     {/* content */}
-                    <div className="h-[70vh] overflow-y-scroll"> 
+                    <div className="h-[80vh] overflow-y-scroll"> 
                         {children}
                     </div> 
                 </div>

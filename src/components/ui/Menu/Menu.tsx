@@ -7,7 +7,7 @@ const Menu = () => {
 
     return (
         <>
-           <div className="mt-4 text-sm">
+           <div className="mt-4 text-sm h-[85vh] overflow-y-scroll">
               {
                 menuItems?.map((elm, index)=>(
                     <div key={index} className="flex flex-col gap-2">
