@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Menu = () => {
-    const role = "admin";
+    const role = "student";
 
     return (
         <>
