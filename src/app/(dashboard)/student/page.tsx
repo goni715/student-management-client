@@ -14,7 +14,7 @@ const StudentPage = () => {
                     </div>
                 </div>
                 {/* Right */}
-                <div className="w-full bg-pink-300 xl:w-1/3 flex flex-col gap-8">
+                <div className="w-full xl:w-1/3 flex flex-col gap-8">
                     <EventCalendar/>
                     <Announcements/>
                 </div>
