@@ -1,9 +1,18 @@
+import { Calendar } from "react-big-calendar";
+
+const localizer = momentLocalizer(moment);
 
 const BigCalendar = () => {
     return (
-        <>
-           <h1>Big Calendar Component</h1> 
-        </>
+      <>
+        <Calendar
+          localizer={localizer}
+          events={myEventsList}
+          startAccessor="start"
+          endAccessor="end"
+          style={{ height: 500 }}
+        />
+      </>
     );
 };
 
