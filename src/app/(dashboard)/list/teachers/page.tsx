@@ -6,7 +6,7 @@ const TeacherListPage = () => {
         <>
           <div className="bg-white p-4 flex-1 rounded-md m-4 mt-0">
              {/* Top */}
-             <div>
+             <div className="flex items-center justify-between">
                <h1 className="hidden md:block text-lg font-semibold">All Teachers</h1>
                <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto">
                  <TableSearch/>
