@@ -1,5 +1,44 @@
+import Table from "@/components/ui/Table/Table";
 import TableSearch from "@/components/ui/Table/TableSearch";
 import Image from "next/image";
+
+
+const columns = [
+  {
+    header: "Info",
+    accessor: "info",
+  },
+  {
+    header: "Teacher ID",
+    accessor: "teacherId",
+    className: "hidden md:table-cell",
+  },
+  {
+    header: "Subjects",
+    accessor: "subjects",
+    className: "hidden md:table-cell",
+  },
+  {
+    header: "Classes",
+    accessor: "classes",
+    className: "hidden md:table-cell",
+  },
+  {
+    header: "Phone",
+    accessor: "phone",
+    className: "hidden lg:table-cell",
+  },
+  {
+    header: "Address",
+    accessor: "address",
+    className: "hidden lg:table-cell",
+  },
+  {
+    header: "Actions",
+    accessor: "action",
+  },
+];
+
 
 const TeacherListPage = () => {
     return (
@@ -20,6 +59,8 @@ const TeacherListPage = () => {
                  </div>
                </div>
              </div>
+             {/* List */}
+             <Table columns={columns} renderRow={renderRow} data={teachersData} />
           </div>     
         </>
     );
