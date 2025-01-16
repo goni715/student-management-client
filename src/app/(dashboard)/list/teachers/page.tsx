@@ -60,7 +60,7 @@ const TeacherListPage = () => {
                </div>
              </div>
              {/* List */}
-             <Table columns={columns} renderRow={renderRow} data={teachersData} />
+             <Table columns={columns} />
           </div>     
         </>
     );

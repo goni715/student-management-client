@@ -1,3 +1,6 @@
+import { ITeacher } from "@/types/teacher.type";
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 type TProps = {
@@ -6,13 +9,13 @@ type TProps = {
         accessor: string;
          className?: string;   
     }[];
-    renderRow: (item: any) => React.ReactNode;
-    data: any[];
+    renderRow?: (item: any) => React.ReactNode;
+    data?: any[];
 }
 
 
 const Table = ({columns, renderRow, data}: TProps) => {
-    const RenderRow = (item: Teacher) => (
+    const RenderRow = (item: ITeacher) => (
         <tr
           key={item.id}
           className="border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-lamaPurpleLight"
@@ -42,23 +45,29 @@ const Table = ({columns, renderRow, data}: TProps) => {
                   <Image src="/view.png" alt="" width={16} height={16} />
                 </button>
               </Link>
-              {role === "admin" && (
+              {/* {role === "admin" && (
                 // <button className="w-7 h-7 flex items-center justify-center rounded-full bg-lamaPurple">
                 //   <Image src="/delete.png" alt="" width={16} height={16} />
                 // </button>
-                <FormModal table="teacher" type="delete" id={item.id}/>
-              )}
+                // <FormModal table="teacher" type="delete" id={item.id}/>
+              )} */}
             </div>
           </td>
         </tr>
       );
 
+      console.log(RenderRow)
+
       
     return (
         <>
-            <table>
+            <table className="w-full mt-4 bg-red-200">
                 <thead>
-
+                    <tr className="text-left text-gray-500 text-sm">
+                        {columns?.map((item, i)=> (
+                            <th key={i.toString()} className={item.className}> {item.header}</th>
+                        ))}
+                    </tr>
                 </thead>
             </table>
         </>
