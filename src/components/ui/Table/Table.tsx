@@ -1,7 +1,9 @@
+import { teachersData } from "@/data/teacher.data";
 import { ITeacher } from "@/types/teacher.type";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import TableRowItem from "./TableRowItem";
 
 type TProps = {
     columns: {
@@ -69,6 +71,11 @@ const Table = ({columns, renderRow, data}: TProps) => {
                         ))}
                     </tr>
                 </thead>
+                <tbody>
+                    {teachersData?.map((item,i)=> (
+                      <TableRowItem key={i.toString()} item={item}/>
+                    ))}
+                </tbody>
             </table>
         </>
     );
