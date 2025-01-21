@@ -63,7 +63,7 @@ const Table = ({columns, renderRow, data}: TProps) => {
       
     return (
         <>
-            <table className="w-full mt-4 bg-red-200">
+            <table className="w-full mt-4">
                 <thead>
                     <tr className="text-left text-gray-500 text-sm">
                         {columns?.map((item, i)=> (
