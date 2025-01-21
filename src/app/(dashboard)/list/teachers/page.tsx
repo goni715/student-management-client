@@ -1,3 +1,4 @@
+import Pagination from "@/components/ui/Pagination/Pagination";
 import Table from "@/components/ui/Table/Table";
 import TableSearch from "@/components/ui/Table/TableSearch";
 import Image from "next/image";
@@ -61,6 +62,8 @@ const TeacherListPage = () => {
              </div>
              {/* List */}
              <Table columns={columns} />
+             {/* Pagination */}
+             <Pagination/>
           </div>     
         </>
     );
