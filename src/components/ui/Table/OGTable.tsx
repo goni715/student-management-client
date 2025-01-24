@@ -8,15 +8,26 @@ type TProps = {
         accessor: string;
         className?: string;
     }[];
-    renderRow: (item: any) => React.ReactNode;
+    renderRow: (item: unknown) => React.ReactNode;
     data: TStudent[];
 }
 
 const OGTable = ({columns, renderRow, data}: TProps) => {
     return (
-        <div>
-            This is Reusable Table
-        </div>
+      <>
+        <table className="w-full mt-4">
+          <thead>
+            <tr className="text-left text-gray-500 text-sm">
+              {columns.map((col) => (
+                <th key={col.accessor} className={col.className}>
+                  {col.header}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>{data.map((item) => renderRow(item))}</tbody>
+        </table>
+      </>
     );
 };
 
