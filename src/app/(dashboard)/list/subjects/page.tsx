@@ -1,6 +1,8 @@
+"use client"
 import Pagination from "@/components/ui/Pagination/Pagination";
 import OGTable from "@/components/ui/Table/OGTable";
 import TableSearch from "@/components/ui/Table/TableSearch";
+import { subjectsData } from "@/data/subject.data";
 import { TSubject } from "@/types/subject.type";
 import Image from "next/image";
 
@@ -22,6 +24,7 @@ const columns = [
 
 
 const SubjectListPage = () => {
+
     const renderRow = (item: TSubject) => (
         <tr
           key={item.id}
@@ -31,12 +34,12 @@ const SubjectListPage = () => {
           <td className="hidden md:table-cell">{item.teachers.join(",")}</td>
           <td>
             <div className="flex items-center gap-2">
-              {role === "admin" && (
+              {/* {role === "admin" && (
                 <>
                   <FormModal table="subject" type="update" data={item} />
                   <FormModal table="subject" type="delete" id={item.id} />
                 </>
-              )}
+              )} */}
             </div>
           </td>
         </tr>
@@ -62,7 +65,7 @@ const SubjectListPage = () => {
                </div>
              </div>
              {/* List */}
-             <OGTable columns={columns} renderRow={renderRow} data={studentsData} />
+             <OGTable columns={columns} renderRow={renderRow} data={subjectsData} />
              {/* Pagination */}
              <Pagination/>
           </div> 

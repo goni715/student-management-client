@@ -1,7 +1,5 @@
 "use client";
 
-import { TStudent } from "@/types/student.type";
-
 type TProps = {
     columns: {
         header:string;
@@ -10,7 +8,8 @@ type TProps = {
     }[];
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     renderRow: (item: any) => React.ReactNode;
-    data: TStudent[];
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    data: any[];
 }
 
 const OGTable = ({columns, renderRow, data}: TProps) => {
