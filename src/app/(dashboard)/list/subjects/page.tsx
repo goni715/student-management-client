@@ -1,4 +1,5 @@
 "use client"
+import FormModal from "@/components/ui/Modal/FormModal";
 import Pagination from "@/components/ui/Pagination/Pagination";
 import OGTable from "@/components/ui/Table/OGTable";
 import TableSearch from "@/components/ui/Table/TableSearch";
@@ -61,6 +62,7 @@ const SubjectListPage = () => {
                     <button className="w-8 h-8 flex items-center justify-center bg-lamaYellow rounded-full">
                       <Image src="/sort.png" alt="sort" width={14} height={14}/>
                     </button>
+                    <FormModal table="teacher" type="create"/>
                  </div>
                </div>
              </div>
