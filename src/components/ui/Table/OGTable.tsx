@@ -8,7 +8,8 @@ type TProps = {
         accessor: string;
         className?: string;
     }[];
-    renderRow: (item: unknown) => React.ReactNode;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    renderRow: (item: any) => React.ReactNode;
     data: TStudent[];
 }
 
