@@ -2,6 +2,7 @@
 import Pagination from "@/components/ui/Pagination/Pagination";
 import OGTable from "@/components/ui/Table/OGTable";
 import TableSearch from "@/components/ui/Table/TableSearch";
+import { studentsData } from "@/data/student.data";
 import { TStudent } from "@/types/student.type";
 import Image from "next/image";
 import Link from "next/link";
@@ -91,7 +92,7 @@ const StudentListPage = () => {
                </div>
              </div>
              {/* List */}
-             <OGTable columns={columns} />
+             <OGTable columns={columns} renderRow={renderRow} data={studentsData} />
              {/* Pagination */}
              <Pagination/>
           </div> 
